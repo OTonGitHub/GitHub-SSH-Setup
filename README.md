@@ -1,4 +1,4 @@
-# SSH/Github
+# SSH/GitHub
 My SSH Settings
 
 > ~/.ssh/config
