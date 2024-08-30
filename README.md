@@ -1,24 +1,29 @@
-# SSH/GitHub
+# GitHub SSH Auth/Sign
+- Using MinTTy on windows, so environment variables might be different from your existing windows setup.
 
-- Using MinTTy on windows, so environment variables might be different.
 ## Commands
-ssh-keygen -t ed25519 -C "your_email@example.com"
-In powershell,
-Get-Service -Name ssh-agent | Set-Service -StartupType Manual
-Start-Service ssh-agent
+> Generate Key
 
-Then on Bash,
-My SSH Settings
-eval "$(ssh-agent -s)"
+```ssh-keygen -t ed25519 -C "your_email@example.com"```
+> In Powershell
 
-Or if want to continue in powershell, just do
-ssh-add C:\path\to\your\key
+```Get-Service -Name ssh-agent | Set-Service -StartupType Automatic```
 
-Then,
-ssh-add -l
-to verify.
+```Start-Service ssh-agent```
 
-Add .pub keys to GitHub, for Auth and Signing if want to sign using same key as well.
+> Then on Bash
+
+```eval "$(ssh-agent -s)"```
+
+> **OR** if want to continue in powershell, just do
+
+```ssh-add C:\path\to\your\key```
+
+> Then, to verify changes do
+
+```ssh-add -l```
+
+*add .pub keys to GitHub, for Auth and Signing if want to sign using same key as well*
 
 ## Configuration
 > ~/.ssh/config
@@ -33,13 +38,17 @@ Host OTonGitHub
 # Port 22
 ```
 
-Test configuration
-ssh -T git@OTonGitHub
+> Test Configuration
 
-Authenticatied!
+```ssh -T git@OTonGitHub```
 
-set username and email
-git config --global user.name "OTonGitHub"
-git config --global user.name ot@myemail.com
+> Set username and email
 
-Test Commit.
+`git config --global user.name "OTonGitHub"`
+
+`git config --global user.name your_email@example.com`
+- *quotes not necessary for email*
+
+## Signing Commits
+- first test if it works or not already.
+
