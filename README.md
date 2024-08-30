@@ -69,7 +69,7 @@ Host OTonGitHub
 
 - Finally, enable signing commits, (to get rid of unverified commits)
 
-`git config --global --unset gpg.format`
+`git config --global --unset gpg.format` *(skippable)*
 
 `git config --global gpg.format ssh`
 
