@@ -56,6 +56,7 @@ Host OTonGitHub
 - _quotes not necessary for email_
 
 ## Signing Commits
+
 - First test if it works or not already.
 - IF private email is disabled, just unset email, and make sure all staged commits don't contain private email.
 
@@ -69,5 +70,8 @@ Host OTonGitHub
 
 `git config --global --unset gpg.format`
 
-`git config --global commit.gpgsign true`
+`git config --global gpg.format ssh`
 
+`git config --global user.signingkey ~/.ssh/OTonGitHub.pub`
+
+`git config --global commit.gpgsign true`
