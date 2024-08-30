@@ -1,6 +1,7 @@
 ## GitHub SSH Auth/Sign
 
 - Using MinTTy on windows, so environment variables might be different from your existing windows setup.
+- Tested on windows, but should-not be any different in Linux, just ignore the powershell comands.
 
 ### Commands
 
