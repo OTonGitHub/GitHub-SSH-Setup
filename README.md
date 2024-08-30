@@ -1,8 +1,8 @@
-# GitHub SSH Auth/Sign
+## GitHub SSH Auth/Sign
 
 - Using MinTTy on windows, so environment variables might be different from your existing windows setup.
 
-## Commands
+### Commands
 
 > Generate Key
 
@@ -28,7 +28,7 @@
 
 _add .pub keys to GitHub, for Auth and Signing if want to sign using same key as well_
 
-## Configuration
+### Configuration
 
 > ~/.ssh/config
 
@@ -55,7 +55,7 @@ Host OTonGitHub
 
 - _quotes not necessary for email_
 
-## Signing Commits
+### Signing Commits
 
 - First test if it works or not already.
 - IF private email is disabled, just unset email, and make sure all staged commits don't contain private email.
