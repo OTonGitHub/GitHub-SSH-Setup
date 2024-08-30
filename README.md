@@ -56,6 +56,18 @@ Host OTonGitHub
 - _quotes not necessary for email_
 
 ## Signing Commits
+- First test if it works or not already.
+- IF private email is disabled, just unset email, and make sure all staged commits don't contain private email.
 
-- first test if it works or not already.
-  Sign
+`git config --global --unset user.email`
+
+> IF staged commits contain private email, change it to provided no-reply email.
+
+`git commit --amend --author="OTonGitHub <81725875+OTonGitHub@users.noreply.github.com>" --no-edit`
+
+- Finally, enable signing commits, (to get rid of unverified commits)
+
+`git config --global --unset gpg.format`
+
+`git config --global commit.gpgsign true`
+
