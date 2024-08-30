@@ -11,7 +11,7 @@
 
 > In Powershell
 
-`Get-Service -Name ssh-agent | Set-Service -StartupType Automatic`
+`Get-Service -Name ssh-agent | Set-Service -StartupType Automatic` **(Elevated Command)**
 
 `Start-Service ssh-agent`
 
