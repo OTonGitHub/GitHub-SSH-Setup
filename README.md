@@ -3,12 +3,12 @@
 - Using MinTTy on windows, so environment variables might be different from your existing windows setup.
 - Guide meant for windows, but should-not be any different in Linux, just ignore the powershell comands.
 
-### Set Working Directory
+### 1 - Set Working Directory
 `cd ~/.ssh`
 
 `touch config`
 
-### Commands
+### 2 - Creating & Adding Key
 
 > Generate Key
 
@@ -34,7 +34,7 @@
 
 _add .pub keys to GitHub, for Auth and Signing if want to sign using same key as well_
 
-### Configuration
+### 3 - Configuration
 
 > ~/.ssh/config
 
@@ -61,7 +61,7 @@ Host OTonGitHub
 
 - _quotes not necessary for email_
 
-### Signing Commits
+### 4 - Signing Commits
 
 - First test if it works or not already.
 - IF private email is disabled, just unset email, and make sure all staged commits don't contain private email.
