@@ -3,6 +3,11 @@
 - Using MinTTy on windows, so environment variables might be different from your existing windows setup.
 - Guide meant for windows, but should-not be any different in Linux, just ignore the powershell comands.
 
+### Set Working Directory
+`cd ~/.ssh`
+
+`touch config`
+
 ### Commands
 
 > Generate Key
