@@ -81,3 +81,22 @@ Host OTonGitHub
 `git config --global user.signingkey ~/.ssh/OTonGitHub.pub`
 
 `git config --global commit.gpgsign true`
+
+### 4 - Adding Repository
+#### New Repository
+```
+echo "# ProjectName" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:OTonGitHub/rgwegergewgwerg.git
+git push -u origin main
+```
+
+#### Push from an Existing Repository
+```
+git remote add origin git@github.com:OTonGitHub/rgwegergewgwerg.git
+git branch -M main
+git push -u origin main
+```
