@@ -12,7 +12,7 @@
 
 > Generate Key
 
-`ssh-keygen -t ed25519 -C "your_email@example.com"`
+`ssh-keygen -t ed25519 -C "orange@daraknet.cc"`
 
 > In Powershell
 
@@ -26,7 +26,9 @@
 
 > **OR** if want to continue in powershell, just do
 
-`ssh-add C:\path\to\your\key`
+Windows: `ssh-add C:\path\to\your\key`
+
+Unix: `ssh-add ~/.ssh/key`
 
 > Then, to verify changes do
 
@@ -57,7 +59,7 @@ Host OTonGitHub
 
 `git config --global user.name "OTonGitHub"`
 
-`git config --global user.name your_email@example.com`
+`git config --global user.name orange@daraknet.cc`
 
 - _quotes not necessary for email_
 
@@ -82,7 +84,7 @@ Host OTonGitHub
 
 `git config --global commit.gpgsign true`
 
-### 4 - Adding Repository
+### 5 - Adding Repository
 #### New Repository
 ```
 echo "# ProjectName" >> README.md
@@ -90,13 +92,13 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:OTonGitHub/rgwegergewgwerg.git
+git remote add origin git@github.com:OTonGitHub/<REPOSITORY_NAME>.git
 git push -u origin main
 ```
 
 #### Push from an Existing Repository
 ```
-git remote add origin git@github.com:OTonGitHub/rgwegergewgwerg.git
+git remote add origin git@github.com:OTonGitHub/<REPOSITORY_NAME>.git
 git branch -M main
 git push -u origin main
 ```
