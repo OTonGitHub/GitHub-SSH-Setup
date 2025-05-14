@@ -14,17 +14,20 @@
 
 `ssh-keygen -t ed25519 -C "orange@daraknet.cc"`
 
-> In Powershell
+> On Powershell
 
 `Get-Service -Name ssh-agent | Set-Service -StartupType Automatic` **(Elevated Command)**
 
 `Start-Service ssh-agent`
 
-> Then on Bash
+> On Bash
 
 `eval "$(ssh-agent -s)"`
 
-> **OR** if want to continue in powershell, just do
+> On Fish
+
+`eval (ssh-agent -c)`
+
 
 Windows: `ssh-add C:\path\to\your\key`
 
